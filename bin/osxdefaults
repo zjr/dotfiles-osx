@@ -153,7 +153,7 @@ defaults write com.apple.iTunes disablePingSidebar -bool true
 # iTunes: disable all the other Ping stuff
 defaults write com.apple.iTunes disablePing -bool true
 
-# iTunes: Increase sound quality for Bluetooth headphones/headsets
+# iTunes: Improved sound quality for Bluetooth headphones or Bluetooth speakers or whatever Bluetooth audio dealie you got goin’ on. Bluetooth.
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Max (editable)" 80
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" 48
 defaults write com.apple.BluetoothAudioAgent "Apple Initial Bitpool (editable)" 40
