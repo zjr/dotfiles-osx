@@ -12,6 +12,9 @@
     # Add untracked, remove deleted, and show status
     adda = !git add -A && git status
 
+    # Unstage previous commit
+    goddammit = !git reset --soft HEAD^
+
     # Fetch a repository ($1) and checkout its ref ($2) HEAD
     browse = !bash -c 'git fetch "$1" "$2" && git checkout FETCH_HEAD' -
 
