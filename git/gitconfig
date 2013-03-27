@@ -12,7 +12,7 @@
     # Add untracked, remove deleted, and show status
     adda = !git add -A && git status
 
-    # Unstage previous commit
+    # Reset previous commit, but keep all the associated changes.
     goddammit = !git reset --soft HEAD^
 
     # Fetch a repository ($1) and checkout its ref ($2) HEAD
