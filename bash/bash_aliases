@@ -15,6 +15,12 @@ alias -- -="cd -"
 alias g="git"
 alias gs="git status"
 
+# Reset previous commit, but keep all the associated changes.
+alias goddammit="git reset --soft HEAD^"
+
+# Open any files marked as “modified” in your default editor.
+alias changed='open `git status --porcelain | sed -ne "s/^ M //p"`'
+
 # List dir contents aliases
 # ref: http://ss64.com/osx/ls.html
 # Long form no user group, color
