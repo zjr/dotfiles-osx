@@ -18,6 +18,9 @@ alias gs="git status"
 # Reset previous commit, but keep all the associated changes.
 alias goddammit="git reset --soft HEAD^"
 
+# Welp.
+alias heckit="git reset --hard HEAD"
+
 # Open any files marked as “modified” in your default editor.
 alias changed='open `git status --porcelain | sed -ne "s/^ M //p"`'
 
