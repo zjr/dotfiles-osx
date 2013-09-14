@@ -6,8 +6,8 @@
 # General UI/UX
 # ----------------------------------------------------------------------
 
-# Disable Menu bar transparency
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# Enable Menu bar transparency
+defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool true
 
 # Enable snap-to-grid for desktop icons
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
@@ -21,26 +21,27 @@ defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
 # Disable automatic termination of inactive apps
 defaults write NSGlobalDomain NSDisableAutomaticTermination -bool true
 
-# Disable Resume system-wide
-defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
+# Enable Resume system-wide
+defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool true
 
-# Disable press-and-hold for keys in favor of key repeat
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+# Enable press-and-hold for keys in favor of key repeat
+# No idea what press-and-hold actually does right now...
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool true
 
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 0
 
 # Finder: kill the desktop
-defaults write com.apple.finder CreateDesktop -bool true
+defaults write com.apple.finder CreateDesktop -bool false
 
 # Dock
 # ----------------------------------------------------------------------
 
-# Dock: enable the 2D Dock
-defaults write com.apple.dock no-glass -bool true
+# Dock: disable the 2D Dock
+defaults write com.apple.dock no-glass -bool false
 
-# Dock: set the icon size of Dock items to 28 pixels
-defaults write com.apple.dock tilesize -int 28
+# Dock: set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
 
 # Dock: show indicator lights for open applications
 defaults write com.apple.dock show-process-indicators -bool true
@@ -55,7 +56,7 @@ defaults write com.apple.dock launchanim -bool false
 defaults write com.apple.dock mineffect scale
 
 # Dock: speed up Mission Control animations
-defaults write com.apple.dock expose-animation-duration -float 0.1
+defaults write com.apple.dock expose-animation-duration -float 0.2
 
 
 # Finder
@@ -76,8 +77,8 @@ defaults write com.apple.finder DisableAllAnimations -bool true
 # Finder: show the ~/Library folder (in OS X Lion)
 chflags nohidden ~/Library
 
-# Finder: show hidden files by default
-defaults write com.apple.finder AppleShowAllFiles -bool true
+# Finder: don't show hidden files by default
+defaults write com.apple.finder AppleShowAllFiles -bool false
 
 # Finder: use list view in all windows by default
 # Four-letter codes for the other view modes: `icnv`, `clmv`, `Flwv`
@@ -170,11 +171,11 @@ defaults write com.apple.BluetoothAudioAgent "Stream Resume Delay" "0.75"
 # Misc: only use UTF-8 in Terminal.app
 defaults write com.apple.terminal StringEncodings -array 4
 
-# Misc: disable Dictionary results
-defaults write com.apple.spotlight DictionaryLookupEnabled -bool false
+# Misc: enable Dictionary results
+defaults write com.apple.spotlight DictionaryLookupEnabled -bool true
 
-# Misc: disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# Misc: enable auto-correct
+defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool true
 
 for app in "Dashboard" "Dock" "Finder" "SystemUIServer" "Terminal" "iTunes"; do
     killall "$app" > /dev/null 2>&1
