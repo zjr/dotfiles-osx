@@ -1,0 +1,8 @@
+#!/bin/bah
+
+# requires mpg123 ([apt-get|brew|etc] install mpg123)
+
+googlesay () {
+    curl -A RG translate\.google\.com/translate_tts -d "tl=en&q=$@" | mpg123 -;
+};
+
