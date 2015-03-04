@@ -3,7 +3,7 @@
 # Start an HTTP server from a directory, optionally specifying the port
 pyserver() {
     # Get port (if specified)
-    local port="${1:-8000}"
+    local port="${1:-8123}"
 
     # Open in the browser
     open "http://localhost:${port}/"
