@@ -23,17 +23,21 @@ tput sgr 0 0
 # Base styles and color palette
 # Solarized colors
 # https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized
+
+# No longer solarized.  All but orange and violet are set as 0-7 colors
+# Others are set near Tomorrow Night colors.
+# Of interest: https://gist.github.com/MicahElliott/719710#file-colortrans-py
 BOLD=$(tput bold)
 RESET=$(tput sgr0)
-SOLAR_YELLOW=$(tput setaf 136)
-SOLAR_ORANGE=$(tput setaf 166)
-SOLAR_RED=$(tput setaf 124)
-SOLAR_MAGENTA=$(tput setaf 125)
-SOLAR_VIOLET=$(tput setaf 61)
-SOLAR_BLUE=$(tput setaf 33)
-SOLAR_CYAN=$(tput setaf 37)
-SOLAR_GREEN=$(tput setaf 64)
-SOLAR_WHITE=$(tput setaf 254)
+SOLAR_YELLOW=$(tput setaf 3)
+SOLAR_ORANGE=$(tput setaf 209)
+SOLAR_RED=$(tput setaf 1)
+SOLAR_MAGENTA=$(tput setaf 5) # not used, atow
+SOLAR_VIOLET=$(tput setaf 176) # not used, atow
+SOLAR_BLUE=$(tput setaf 4)
+SOLAR_CYAN=$(tput setaf 6)
+SOLAR_GREEN=$(tput setaf 2)
+SOLAR_WHITE=$(tput setaf 7)
 
 style_user="\[${RESET}${SOLAR_ORANGE}\]"
 style_host="\[${RESET}${SOLAR_YELLOW}\]"
