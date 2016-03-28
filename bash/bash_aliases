@@ -71,3 +71,5 @@ alias hidedeskicons="defaults write com.apple.finder CreateDesktop -bool false &
 # Restart the Dock
 alias killdock="osascript -e 'quit application \"Dock\"'"
 
+alias cmdctr="itermocil --here cc"
+
