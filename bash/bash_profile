@@ -30,6 +30,7 @@ if [[ -r $bash_completion_path ]]; then
     source $bash_completion_path
 fi
 
+complete -W "$(itermocil --list)" itermocil
 
 [ -s "/Users/$USER/.nvm/nvm.sh" ] && . "/Users/$USER/.nvm/nvm.sh" # This loads nvm
 
