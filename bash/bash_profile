@@ -40,3 +40,6 @@ eval "$ssh_complete mosh"
 export NVM_DIR="/Users/zrollyson/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+# for executing local npm packages (have to put this after nvm sourcing)
+alias npm-exec="PATH=$(npm bin):$PATH"
+

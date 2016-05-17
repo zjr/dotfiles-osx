@@ -77,6 +77,3 @@ alias circle-ssh="ssh -i ~/.ssh/zachizi"
 # Itermocil shortcut
 alias cmdctr="itermocil --here cc"
 
-# for executing local npm packages
-alias npm-exec="PATH=$(npm bin):$PATH"
-
