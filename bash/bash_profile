@@ -25,6 +25,8 @@ unset files
 # Only use `brew` after it has been added to the PATH
 bash_completion_path="$(brew --prefix)/etc/bash_completion"
 
+export GREP_OPTIONS="--color"
+
 # Source Bash completion (installed via Homebrew)
 if [[ -r $bash_completion_path ]]; then
     source $bash_completion_path
