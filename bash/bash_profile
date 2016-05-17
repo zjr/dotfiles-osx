@@ -37,3 +37,6 @@ complete -W "$(itermocil --list)" itermocil
 ssh_complete=$(complete -p ssh)
 eval "$ssh_complete mosh"
 
+export NVM_DIR="/Users/zrollyson/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
